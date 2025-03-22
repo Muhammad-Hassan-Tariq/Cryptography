@@ -63,7 +63,7 @@ int main() {
     // Decrypt the result back to original using the same key
     decrypt(9, text);
 
-    // Just a cool styled slogan at the end ✨
+    // Just a styled slogan at the end ✨
     string slogan = "<------------------------The Eagle------------------------>";
     cout << endl << setw(80) << slogan;
 }
