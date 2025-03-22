@@ -1,52 +1,67 @@
-# 🔐 Cryptography Lab — Classical to Modern Crypto, All in One Repo
+# 🔐 Cryptography Lab — From Classical Ciphers to Modern Crypto
 
 Hey there! 👋  
-Welcome to **Cryptography Lab** — a curated collection of 🔒 cryptographic algorithms implemented from scratch in **C++** and other languages (as I go). Whether you're learning crypto basics or flexing your cyber muscles, this repo has your back 💪
+Welcome to **Cryptography Lab** — a curated collection of 🔒 cryptographic algorithms, all implemented from scratch in **C++** by me (a 3rd-semester CS undergrad 🤓).  
+
+No black-box libraries. No shortcuts. Just raw, hands-on cryptography.
 
 ---
 
-## 📚 What's in This Lab?
+## 📚 What's Inside?
 
-This repo is basically a **toolkit for understanding core concepts of Cryptography** — from ancient Caesar shifts to modern-day RSA and digital signatures.
+This repo is basically a **mini lab for learning & exploring Cryptography** — from Caesar shifts to RSA, hashing, and digital signatures.
 
 ### 🏛 Classical Ciphers
-- ✅ Caesar Cipher
-- ✅ Vigenère Cipher
-- ✅ Transposition Cipher
-- ✅ Hill Cipher
-- ✅ Playfair Cipher *(maybe add later)*
+- ✅ Caesar Cipher  
+- ✅ Vigenère Cipher  
+- ✅ Transposition Cipher  
+- ✅ Hill Cipher  
 
 ### 🔐 Public-Key Cryptography
-- ✅ RSA Encryption/Decryption
-- ✅ Diffie-Hellman Key Exchange
-- 🔜 ElGamal Cryptosystem *(planned)*
+- ✅ RSA (Key Generation + Encryption/Decryption)  
+- ✅ Diffie-Hellman Key Exchange  
 
 ### ✍️ Digital Signatures & Certificates
-- ✅ Simple Signature Demo
-- ✅ Certificate Generation Basics *(in progress)*
-
-### 🔑 Key Exchange Protocols
-- ✅ Diffie-Hellman (again, because it slaps)
-- 🔜 ECC-based exchange *(future work)*
+- ✅ Basic Digital Signature Demo  
+- ✅ Simple Digital Certificate Generator  
 
 ### #️⃣ Hashing Algorithms
-- ✅ Simple Hashing (custom demo)
-- 🔜 SHA Family Implementation
-- 🔜 Hash collision exploration / rainbow tables (maybe 😉)
+- ✅ Custom Demo Hash Function  
+- ✅ SHA Family Implementation *(planned/in-progress)*  
+- ✅ Hash Collisions / Rainbow Table Exploration *(experimental)*  
 
 ---
 
-## 🧠 Why This Exists
+## 🔄 Putting It All Together
 
-As a **Cybersecurity enthusiast**, I wanted a place where everything cryptographic lives — raw, minimal, and easy to grasp. No black-box libraries, no hand-waving.  
-Just **you + code + math + logic** = 🔥
+This repo isn't just isolated demos — the goal is to show how these cryptographic tools work **in harmony**.  
+🔐 Encryption + Hashing + Signing + Key Exchange — this is how modern security systems are built.
 
-Whether you're a student, hacker, or crypto-curious dev, this repo will help you understand:
-- How crypto **actually works behind the scenes**
-- How to **implement it yourself**
-- How to **break & defend** systems better (ethically, of course 😎)
+Future updates will include practical flows showing how these techniques combine in **real-world systems** (e.g., secure messaging, authentication protocols, hybrid encryption models, etc.).
 
 ---
 
-## 🧾 Structure (Planned)
+## 💡 Why I Made This
+
+As a **Cybersecurity enthusiast**, I wanted a single place to:
+- Learn crypto by building it  
+- Understand how real encryption works behind the scenes  
+- See how systems are built (and how they break 👀)
+
+This repo is my way of going beyond just reading about algorithms — I coded them.  
+Whether you're a student, a dev, or just crypto-curious — this lab will help you **truly understand** the magic behind cryptography 💥
+
+---
+
+## 🤝 Contributions / Feedback?
+
+Feel free to fork, clone, suggest improvements, or just drop a star ⭐  
+I’m actively expanding this — so ideas, feedback, and collabs are more than welcome!
+
+---
+
+## 🔗 Author
+**Hassan** — CS Undergrad | Cybersecurity & Crypto Enthusiast |
+> “Code it to understand it.”
+
 
