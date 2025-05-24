@@ -15,7 +15,10 @@ This repo is basically a **mini lab for learning & exploring Cryptography** — 
 - ✅ Caesar Cipher  
 - ✅ Vigenère Cipher  
 - ✅ Transposition Cipher  
-- ✅ Hill Cipher  
+- ✅ Hill Cipher
+
+### ⚔️ Modern Cipher Frameworks/ Helper Algorithms
+- ✅ Fiestel Cipher/ Network  
 
 ### 🔐 Public-Key Cryptography
 - ✅ RSA (Key Generation + Encryption/Decryption)  
