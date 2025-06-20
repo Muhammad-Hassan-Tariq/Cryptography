@@ -9,16 +9,11 @@ No black-box libraries. No shortcuts. Just raw, hands-on cryptography.
 
 ## 📚 What's Inside?
 
-This repo is basically a **mini lab for learning & exploring Cryptography** — from Caesar shifts to RSA, hashing, and digital signatures.
-
-### 🏛 Classical Ciphers
-- ✅ Caesar Cipher  
-- ✅ Vigenère Cipher  
-- ✅ Transposition Cipher  
-- ✅ Hill Cipher
+This repo is basically a **mini lab for learning & exploring Cryptography** — from RSA to hashing, AES, and digital signatures.
 
 ### ⚔️ Modern Cipher Frameworks/ Helper Algorithms
-- ✅ Fiestel Cipher/ Network  
+- ✅ Fiestel Cipher/ Network
+- ✅ Advance Encryption Standard (AES)  
 
 ### 🔐 Public-Key Cryptography
 - ✅ RSA (Key Generation + Encryption/Decryption)  
