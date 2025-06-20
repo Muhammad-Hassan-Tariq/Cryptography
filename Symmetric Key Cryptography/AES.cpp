@@ -1,3 +1,24 @@
+/*----------------------------------------------------AES Core Implementation (128-bit) 🔐 ----------------------------------------------------*/
+/* Author      : Hassan (a.k.a. The Eagle 🦅)
+ * Description : Core logic for AES block cipher operations, including:
+ *               - Galois Field multiplication (GF(2^8))
+ *               - S-box and Inverse S-box generation
+ *               - Key expansion (AES-128)
+ *
+ * Note        : This is a minimal, clean AES core for educational and experimental use.
+ *               No dependencies, no fluff — just pure C++ logic.
+ *
+ * License     : Public Domain / MIT — use it, break it, improve it 👨‍💻
+ * GitHub      : [your GitHub URL if you want to add it]
+ *
+ * To-Do       :
+ *               - Add full AES encrypt/decrypt functions
+ *               - Implement MixColumns, ShiftRows, and AddRoundKey
+ *               - Integrate with CBC/CTR/ECB mode as needed
+ *
+ * Last Updated: 20 June 2025
+ */
+
 #include <array>
 #include <cstdint>
 #include <iomanip>
@@ -6,12 +27,15 @@
 #include <vector>
 using std::cout;
 using std::endl;
-#define BLOCK_SIZE 16
+constexpr size_t BLOCK_SIZE = 16;
+namespace aes {
+
+}
 
 /*----------------------------------------------------Structure for Returning State & Key----------------------------------------------------*/
 // Holds both the AES state and the round key for encryption/decryption
-struct State_Key {
-   uint8_t _state[16], _key[16];
+struct Statekey {
+   uint8_t state[16], key[16];
 };
 
 /*----------------------------------------------------AES Sboxes----------------------------------------------------*/
@@ -219,7 +243,7 @@ class AES {
 
  public:
    /*----------------------------------------------------Encrypt Function----------------------------------------------------*/
-   State_Key encryptData(const uint8_t in[BLOCK_SIZE], bool isVerbose = false) {
+   Statekey encryptData(const uint8_t in[BLOCK_SIZE], bool isVerbose = false) {
       // Load input plaintext into the AES state matrix (column-major order)
       for (int i = 0; i < 16; i++) {
          state[i % 4][i / 4] = in[i];
@@ -248,25 +272,25 @@ class AES {
       }
 
       // Package state and key into a return struct
-      State_Key result;
+      Statekey result;
       for (int i = 0; i < 16; i++) {
-         result._state[i] = state[i % 4][i / 4];
-         result._key[i] = key[i % 4][i / 4];
+         result.state[i] = state[i % 4][i / 4];
+         result.key[i] = key[i % 4][i / 4];
       }
 
       return result;
    }
 
    /*----------------------------------------------------Decrypt Function----------------------------------------------------*/
-   State_Key decryptData(const State_Key &encrypted, bool isVerbose = false) {
+   Statekey decryptData(const Statekey &encrypted, bool isVerbose = false) {
       // Load ciphertext into the AES state matrix (column-major order)
       for (int i = 0; i < 16; i++) {
-         state[i % 4][i / 4] = encrypted._state[i];
+         state[i % 4][i / 4] = encrypted.state[i];
       }
 
       // Load the original encryption key into the key matrix
       for (int i = 0; i < 16; i++) {
-         key[i % 4][i / 4] = encrypted._key[i];
+         key[i % 4][i / 4] = encrypted.key[i];
       }
       // Expand the decryption round keys
       generateRoundKeys();
@@ -287,10 +311,10 @@ class AES {
       }
 
       // Package decrypted state and key into return struct
-      State_Key result;
+      Statekey result;
       for (int i = 0; i < 16; i++) {
-         result._state[i] = state[i % 4][i / 4];
-         result._key[i] = key[i % 4][i / 4];
+         result.state[i] = state[i % 4][i / 4];
+         result.key[i] = key[i % 4][i / 4];
       }
       return result;
    }
@@ -327,8 +351,8 @@ int main() {
        ' ', ' ', ' ', 'E',
        'A', 'G', 'L', 'E'};
    AES sample;
-   State_Key encrypted = sample.encryptData(test);
-   State_Key decrypted = sample.decryptData(encrypted);
+   Statekey encrypted = sample.encryptData(test);
+   Statekey decrypted = sample.decryptData(encrypted);
 
    /*----------------------------------------------------Verification----------------------------------------------------*/
    cout << "Original Text: ";
@@ -337,11 +361,11 @@ int main() {
    }
    cout << "\nEncrypted Text: ";
    for (int i = 0; i < BLOCK_SIZE; i++) {
-      cout << encrypted._state[i];
+      cout << encrypted.state[i];
    }
    cout << "\nDecrypted Text: ";
    for (int i = 0; i < BLOCK_SIZE; i++) {
-      cout << decrypted._state[i];
+      cout << decrypted.state[i];
    }
    /*----------------------------------------------------Ending Note----------------------------------------------------*/
    std::string slogan = "<------------------------The Eagle------------------------>";
