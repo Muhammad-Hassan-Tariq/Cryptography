@@ -11,7 +11,7 @@ No black-box libraries. No shortcuts. Just raw, hands-on cryptography.
 
 This repo is basically a **mini lab for learning & exploring Cryptography** — from RSA to hashing, AES, and digital signatures.
 
-### ⚔️ Modern Cipher Frameworks/ Helper Algorithms
+### 🔐 Symmetric-Key Cryptography
 - ✅ Fiestel Cipher/ Network
 - ✅ Advance Encryption Standard (AES)  
 
