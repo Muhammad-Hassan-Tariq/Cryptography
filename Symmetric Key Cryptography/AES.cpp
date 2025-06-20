@@ -9,12 +9,6 @@
  *               No dependencies, no fluff — just pure C++ logic.
  *
  * License     : Public Domain / MIT — use it, break it, improve it 👨‍💻
- * GitHub      : [your GitHub URL if you want to add it]
- *
- * To-Do       :
- *               - Add full AES encrypt/decrypt functions
- *               - Implement MixColumns, ShiftRows, and AddRoundKey
- *               - Integrate with CBC/CTR/ECB mode as needed
  *
  * Last Updated: 20 June 2025
  */
